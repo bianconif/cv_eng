@@ -28,6 +28,13 @@
 %----------------------------------------------------------------------------------------
 %Set Sans Serif fonts
 \renewcommand{\familydefault}{\sfdefault}
+
+%Avoid warning with multiple \bibentry pointing to the same item
+\makeatletter
+\renewcommand\bibentry[1]{\nocite{#1}{\frenchspacing
+     \@nameuse{BR@r@#1\@extra@b@citeb}}}
+\makeatother
+
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
